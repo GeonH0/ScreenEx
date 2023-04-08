@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D7A01252933C57C00015EA4 /* CodePushViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7A01242933C57C00015EA4 /* CodePushViewController.swift */; };
 		1D98B1052925218C00F46CD8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D98B1042925218C00F46CD8 /* AppDelegate.swift */; };
 		1D98B1072925218C00F46CD8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D98B1062925218C00F46CD8 /* SceneDelegate.swift */; };
 		1D98B1092925218C00F46CD8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D98B1082925218C00F46CD8 /* ViewController.swift */; };
@@ -16,6 +17,9 @@
 		1D98B11C2925218D00F46CD8 /* ScreenTransitionExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D98B11B2925218D00F46CD8 /* ScreenTransitionExampleTests.swift */; };
 		1D98B1262925218D00F46CD8 /* ScreenTransitionExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D98B1252925218D00F46CD8 /* ScreenTransitionExampleUITests.swift */; };
 		1D98B1282925218D00F46CD8 /* ScreenTransitionExampleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D98B1272925218D00F46CD8 /* ScreenTransitionExampleUITestsLaunchTests.swift */; };
+		1D98B1352925243A00F46CD8 /* SeguePushViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D98B1342925243A00F46CD8 /* SeguePushViewController.swift */; };
+		1DCCE188292A247500667664 /* SuguePresentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCCE187292A247500667664 /* SuguePresentViewController.swift */; };
+		1DD0140B2936726400285443 /* CodePresentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD0140A2936726400285443 /* CodePresentViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1D7A01242933C57C00015EA4 /* CodePushViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodePushViewController.swift; sourceTree = "<group>"; };
 		1D98B1012925218C00F46CD8 /* ScreenTransitionExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScreenTransitionExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D98B1042925218C00F46CD8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1D98B1062925218C00F46CD8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +54,9 @@
 		1D98B1212925218D00F46CD8 /* ScreenTransitionExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScreenTransitionExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D98B1252925218D00F46CD8 /* ScreenTransitionExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenTransitionExampleUITests.swift; sourceTree = "<group>"; };
 		1D98B1272925218D00F46CD8 /* ScreenTransitionExampleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenTransitionExampleUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		1D98B1342925243A00F46CD8 /* SeguePushViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeguePushViewController.swift; sourceTree = "<group>"; };
+		1DCCE187292A247500667664 /* SuguePresentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuguePresentViewController.swift; sourceTree = "<group>"; };
+		1DD0140A2936726400285443 /* CodePresentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodePresentViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,13 +107,17 @@
 		1D98B1032925218C00F46CD8 /* ScreenTransitionExample */ = {
 			isa = PBXGroup;
 			children = (
+				1DD0140A2936726400285443 /* CodePresentViewController.swift */,
 				1D98B1042925218C00F46CD8 /* AppDelegate.swift */,
 				1D98B1062925218C00F46CD8 /* SceneDelegate.swift */,
 				1D98B1082925218C00F46CD8 /* ViewController.swift */,
 				1D98B10A2925218C00F46CD8 /* Main.storyboard */,
+				1DCCE187292A247500667664 /* SuguePresentViewController.swift */,
 				1D98B10D2925218D00F46CD8 /* Assets.xcassets */,
 				1D98B10F2925218D00F46CD8 /* LaunchScreen.storyboard */,
 				1D98B1122925218D00F46CD8 /* Info.plist */,
+				1D98B1342925243A00F46CD8 /* SeguePushViewController.swift */,
+				1D7A01242933C57C00015EA4 /* CodePushViewController.swift */,
 			);
 			path = ScreenTransitionExample;
 			sourceTree = "<group>";
@@ -258,7 +270,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1DCCE188292A247500667664 /* SuguePresentViewController.swift in Sources */,
+				1D7A01252933C57C00015EA4 /* CodePushViewController.swift in Sources */,
+				1D98B1352925243A00F46CD8 /* SeguePushViewController.swift in Sources */,
 				1D98B1092925218C00F46CD8 /* ViewController.swift in Sources */,
+				1DD0140B2936726400285443 /* CodePresentViewController.swift in Sources */,
 				1D98B1052925218C00F46CD8 /* AppDelegate.swift in Sources */,
 				1D98B1072925218C00F46CD8 /* SceneDelegate.swift in Sources */,
 			);
