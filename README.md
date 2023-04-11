@@ -6,6 +6,8 @@
 
 > Swift를 이용한 아이폰 화면 전환 예제 입니다.
 
+> ++ 화면간 데이터 전달 예제
+
 
 
 ![image](https://user-images.githubusercontent.com/88571960/230752521-8f29fbb7-458d-4ac9-9562-8bc8ffe317b9.png)
@@ -73,7 +75,7 @@ viewController에서 코드로 push 버튼에 액션 함수를 정의  한후
 
 ```sh
 
-self.storyboard?.instantiateViewController(identifier: "CodePushViewController" /*이동할 storyboardID*/) as? CodePushViewController
+self.storyboard?.instantiateViewController(identifier: "CodePushViewController" /*이동할 storyboardID*/) 
 
 else { return }
 
@@ -98,7 +100,7 @@ ViewController에서 코드로 Present 버튼에 액션 함수를 정의 한 후
 
 ```sh
 
-guard let viewController = self.storyboard?.instantiateViewController(identifier: "CodePresentViewController") as? CodePresentViewController else {return}
+guard let viewController = self.storyboard?.instantiateViewController(identifier: "CodePresentViewController") else {return}
 
 viewController.modalPresentationStyle = .fullScreen // fullScreen 설정
 
@@ -110,6 +112,40 @@ viewController.modalPresentationStyle = .fullScreen // fullScreen 설정
 
 
 BackButton은 Segue로 Present 에서 활용했던 backButton과 동일하게 선언해 주면 된다
+
+
+
+
+## 코드로 Present,Push 화면에 데이터 전달하기
+
+
+먼저 viewController로 이동하여 viewcontroller를 instance화 해주는 코드에 각각 as? CodePushViewController, as? CodePresentViewController 로 다운캐스팅 해줍니다
+```sh
+guard let viewController = self.storyboard?.instantiateViewController(identifier: "CodePresentViewController") as? CodePresentViewController else {return}
+
+self.storyboard?.instantiateViewController(identifier: "CodePushViewController" /*이동할 storyboardID*/) as? CodePushViewController else {return}
+
+```
+
+이렇게 각 타입에 맞는 뷰 컨트롤러로 다운 캐스팅할 경우 
+각 뷰 컨트롤러의 프로퍼티에 접근할수 있게 된다. 
+그럴경우 다른 화면에 push 되기전에 프로퍼티에 값을 넘겨주면 전환되는 화면으로 데이터 전환이 가능하다
+
+전달 받은 프로퍼티는 각 뷰컨트롤러로 viewDidLoad에 옵셔널 바인딩해서 전달받은 데이터를 출력해보면 잘 출력되는것을 볼수 있다.
+
+위 프로젝트에서는 namelabel.text에 name을 넘겨주는 예시를 해보았다.
+
+![image](https://user-images.githubusercontent.com/88571960/231225370-0cd6323e-9678-404c-8a2e-49588ccb5fae.png)
+![image](https://user-images.githubusercontent.com/88571960/231225267-85bcfd13-6e5c-4a1c-baf1-e691e3f43527.png)
+
+위와 같이 잘 넘어 오는것을 볼수 있었다.
+
+하지만 약간의 오류가 있었다. 순서를 잘못 두어 self.present(viewController, animated : true,completion: nil) 아래에 프로퍼티를 설정하니 제대로 작동하지 않게되었다. 
+프로퍼티는 순서를 잘 보면서 코드를 짜야될거 같다.
+
+
+
+
 
 
 
