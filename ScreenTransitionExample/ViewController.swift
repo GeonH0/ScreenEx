@@ -9,19 +9,25 @@ class ViewController: UIViewController,SendDataDelegeate {
     }
     @IBOutlet weak var nameLabel: UILabel!
     @IBAction func TapCodePushButton(_ sender: UIButton) {
-        guard let viewController = self.storyboard?.instantiateViewController(identifier: "CodePushViewController") as? CodePushViewController
-                
+        guard let viewController = self.storyboard?.instantiateViewController(identifier: "CodePushViewController"/*이동할 storyboardID*/) as? CodePushViewController
         else { return }
-        viewController.name="Carter"
         self.navigationController?.pushViewController(viewController, animated: true)
+        
+        viewController.name="Carter"
+        
+        
     }
     
     @IBAction func TapCodePresentButton(_ sender: UIButton) {
-        guard let viewController = self.storyboard?.instantiateViewController(identifier: "CodePresentViewController") as? CodePresentViewController  else {return}
-        viewController.modalPresentationStyle = .fullScreen
+        guard let viewController = self.storyboard?.instantiateViewController(identifier: "CodePresentViewController") as? CodePresentViewController  else {return}  // 다운캐스팅 해준다.각 타입에 맞는 뷰 컨트롤러로 다운 캐스팅할 경우 각 뷰 컨트롤러의 프로퍼티에 접근할수 있게 된다. 그럴경우 다른 화면에 push 되기전에 프로퍼티에 값을 넘겨주면 전환되는 화면으로 데이터 전환이 가능핟
+        
+        viewController.modalPresentationStyle = .fullScreen // fullScreen 설정
         viewController.name="Carter"
-        viewController.delegate = self
         self.present(viewController, animated : true,completion: nil)
+        
+        
+        viewController.delegate = self
+
     }
     override func viewWillAppear(_ animated:Bool) {
         super.viewWillAppear(animated)
@@ -33,6 +39,7 @@ class ViewController: UIViewController,SendDataDelegeate {
             viewController.name="Carter"
         }
     }
+    
     func sendData(name: String) {
         self.nameLabel.text=name
         self.nameLabel.sizeToFit()

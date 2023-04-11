@@ -12,9 +12,14 @@ protocol SendDataDelegeate: AnyObject{
 }
 
 class CodePresentViewController: UIViewController {
-
+    
+    
+    
+    
     @IBOutlet weak var nameLable: UILabel!
+    
     var name : String?
+    
     weak var delegate: SendDataDelegeate?
     
     override func viewDidLoad() {

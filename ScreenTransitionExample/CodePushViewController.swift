@@ -9,7 +9,8 @@ import UIKit
 
 class CodePushViewController: UIViewController {
     @IBOutlet weak var nameLable: UILabel!
-    var name : String?
+    
+    var name : String? // 프로퍼티 추가
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -23,7 +23,6 @@
                                 <buttonConfiguration key="configuration" style="filled" title="Back Button"/>
                                 <connections>
                                     <action selector="tapBackButton:" destination="EMe-ij-XBj" eventType="touchUpInside" id="4mv-YG-96l"/>
-                                    <action selector="tpaBackButton:" destination="EMe-ij-XBj" eventType="touchUpInside" id="xrN-lI-hTg"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Segue로 Push" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uda-XT-LUh">
@@ -51,7 +50,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Eeg-Gm-VH0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1423" y="112"/>
+            <point key="canvasLocation" x="2643" y="127"/>
         </scene>
         <!--Sugue Present View Controller-->
         <scene sceneID="UrE-PL-Wzl">
@@ -84,7 +83,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LF4-Rf-wsY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1422" y="918"/>
+            <point key="canvasLocation" x="1511" y="119"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -100,7 +99,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Segue로 Push"/>
                                 <connections>
-                                    <segue destination="EMe-ij-XBj" kind="show" id="LzL-bU-YF0"/>
+                                    <segue destination="EMe-ij-XBj" kind="show" id="SJV-ep-xU1"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EZX-75-I6P">
@@ -134,7 +133,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Segue로 Present"/>
                                 <connections>
-                                    <segue destination="T7B-fG-Wx5" kind="presentation" modalPresentationStyle="fullScreen" id="gdp-2w-nSD"/>
+                                    <segue destination="T7B-fG-Wx5" kind="presentation" modalPresentationStyle="fullScreen" id="Hcy-dg-bD0"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -229,7 +228,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
-                        <outlet property="nameLable" destination="iA0-JI-zqX" id="D5M-0O-fKw"/>
+                        <outlet property="nameLable" destination="iA0-JI-zqX" id="ZQu-bZ-PZT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h7P-lT-WNe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
