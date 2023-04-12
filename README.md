@@ -212,7 +212,9 @@ override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 ```
 SeguepushViewController로 다운캐스팅합니다.
 그리고 SeguepushViewController에 설정된 프로퍼티를 변경해 주면
+
 ![스크린샷 2023-04-12 오후 4 00 41](https://user-images.githubusercontent.com/88571960/231377570-6e274687-d306-4e3a-b1b6-2b3dce1d19fa.png)
+
 와 같이 잘 전달 되는 것을 알수 있습니다
 
 화면 전달에는 닶이 없습니다 상황에 맞추어 잘 활용하면 좋을거 같습니다.
